@@ -1,0 +1,20 @@
+{
+  "name": "pingroom-starter-project-room",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Provision a private PingRoom room for a project with a reviewed plan and durable recovery journal.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/main.js plan",
+    "plan": "node src/main.js plan",
+    "create": "node src/main.js create",
+    "inspect": "node src/main.js inspect",
+    "recover": "node src/main.js recover",
+    "connect": "node src/connect.js",
+    "test": "node --test",
+    "demo": "node src/demo.js"
+  },
+  "dependencies": { "@pingroom/sdk": "0.6.0" },
+  "license": "MIT"
+}
