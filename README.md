@@ -50,7 +50,7 @@ Run the same plan/create command again to return the **historical local receipt*
 
 Only these four fields are accepted. Changing the input under an existing project ID is rejected. Review the input before planning; the starter does not edit or discard saved plans.
 
-Creation uses `rooms.create({ name, icon, color })`, the SDK's private-room endpoint. That endpoint prohibits a separate `is_public` field. The starter checks the response and a fresh `rooms.list()` for the exact settings, a standard/private room, and one matching owner. It does not use `rooms.get()`, which marks notifications read.
+Creation uses `rooms.create({ name, icon, color })`, the SDK's private-room endpoint. That endpoint prohibits a separate `is_public` field. The starter checks the response and a fresh `rooms.list()` for the exact settings, a standard/private room, and one matching owner.
 
 The credential needs `pingroom:rooms:read`, `pingroom:rooms:write`, and all-rooms access. Server permissions, name filtering, and owned-room plan quotas still apply. The new room initially allows its members to trigger default actions. If the connection has no delivery room, PingRoom may adopt the new room as its delivery room; an existing delivery-room choice stays unchanged. Creation also causes PingRoom's normal silent room refresh on the owner's devices.
 
